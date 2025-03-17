@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services & Facilities</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#">
+      <!-- <img src="images/logo.png" alt="Logo" class="logo" /> -->
+      <img src="images/new-logo-1.png" alt="Logo" class="logo" />
+    </a>
+  </div>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="text-overlay" id="animated-text"></div>
+    <button class="arrow arrow-left" onclick="prevImage()">&#9664;</button>
+    <button class="arrow arrow-right" onclick="nextImage()">&#9654;</button>
+  </div>
+
+  <script>
+    const images = [
+      "images/1.png",
+      "images/2.png",
+      "images/4.png",
+      "images/5.png"
+    ];
+
+    const texts = [
+      "PASSION FOR EXCELLENCE & OBSESSION FOR STAKEHOLDER-VALUE",
+      "INNOVATION DRIVES GROWTH & SUCCESS",
+      "LEADING THE WAY IN TECHNOLOGY & DEVELOPMENT",
+      "FOCUS ON PRODUCING TOP QUALITY RESULTS"
+    ];
+
+    let currentIndex = 0;
+    let slideshowInterval;
+
+    function showImage() {
+      document.querySelector(".slideshow-container").style.backgroundImage =
+        `url("${images[currentIndex]}")`;
+      document.getElementById("animated-text").innerHTML = texts[currentIndex];
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage();
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage();
+    }
+
+    function startSlideshow() {
+      slideshowInterval = setInterval(nextImage, 5000);
+    }
+
+    window.onload = function() {
+      showImage();
+      startSlideshow();
+    };
+  </script>
+
+  <!-- Info section -->
+  <div class="info-section">
+    <div class="info-box">
+      <div class="info-circle">65+</div>
+      <p>
+        Years of combined retail experience in building large-scale, distributed, 
+        low-latency systems for leading retailers in the world.
+      </p>
+    </div>
+  </div>
+
+  <!-- "Our Services" -->
+  <div class="services-section">
+    <h1>Our Services</h1>
+    <div class="services-grid">
+      <!-- BOX 1 (Section 1) with zoom on hover -->
+      <div class="services-box box-1"></div>
+
+      <div class="services-box">
+        <h2>Cloud</h2>
+        <p>The cloud is a collection of services and data that are accessible over the internet.<a href="cloud.html"  class="read-more">Read more...</a></p>
+      </div>
+
+      <div class="services-box">
+        <h2>Artificial Intelligence</h2>
+        <p>Artificial intelligence (AI) is a technology that allows computers to perform tasks requiring human intelligence.<a href="ai.html"  class="read-more">Read more...</a></p>
+      </div>
+
+      <!-- BOX 4 (Section 4) with zoom on hover -->
+      <div class="services-box box-4"></div>
+
+      <!-- BOX 5 (Section 5) with zoom on hover -->
+      <div class="services-box box-5"></div>
+
+      <div class="services-box">
+        <h2>ERP</h2>
+        <p>Enterprise resource planning (ERP) is a software system that helps businesses manage and automate their core processes. ERP systems can help with finance, human resources, manufacturing, supply chain, and more. <a href="erp.html"  class="read-more">Read more...</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- "Our Facilities" -->
+  <div class="facilities-section">
+    <h2>Our Facilities</h2>
+    <div class="facilities-grid">
+      <div class="facilities-box facility-1"></div>
+      <div class="facilities-box">
+        <h3>65+</h3>
+        <p>Combined Years of Expertise</p>
+      </div>
+      <div class="facilities-box facility-3"></div>
+      <div class="facilities-box">
+        <h3>Established In 2025</h3>
+        <p>Short description of facility four.</p>
+      </div>
+      <div class="facilities-box facility-5"></div>
+      <div class="facilities-box">
+        <h3>120+ projects</h3>
+        <p>Short description of facility six.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- "Our Team" - horizontal layout with circular images -->
+  <div class="team-section">
+    <h2>Our Team</h2>
+    <div class="team-cards">
+      <!-- Card 1 -->
+      <div class="team-card">
+        <img src="images/satya.jpeg">
+        <h3>Sathya Pallela</h3>
+        <p>Co-Founder & CEO</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget metus id ipsum malesuada sagittis sed non ex. Vestibulum risus mauris, malesuada vel elementum gravida, rhoncus eget tellus. </p>
+      </div>
+      <!-- Card 2 -->
+      <div class="team-card">
+        <img src="images/satya.jpeg">
+        <h3>Sathya Pallela</h3>
+        <p>Co-Founder & CTO</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget metus id ipsum malesuada sagittis sed non ex. Vestibulum risus mauris, malesuada vel elementum gravida, rhoncus eget tellus. </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- "Our Process" -->
+<div class="process-section">
+  <h2>Our Process</h2>
+  <p class="process-subtitle">Accelerated Delivery Model</p>
+
+  <div class="process-timeline">
+      <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+              <h3>Meet</h3>
+              <p>Our team meets with your SMEs, understands the use cases via group sessions, and recommends potential solutions.</p>
+          </div>
+      </div>
+
+      <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+              <h3>Plan</h3>
+              <p>We partner with you to create an approach, set goals, and plan deliverables.</p>
+          </div>
+      </div>
+
+      <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+              <h3>Design</h3>
+              <p>Our products are flexible and integrate seamlessly with your existing infrastructure.</p>
+          </div>
+      </div>
+
+      <div class="process-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+              <h3>Develop</h3>
+              <p>Our skilled engineers execute the project efficiently with flexible and configurable features.</p>
+          </div>
+      </div>
+
+      <div class="process-step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+              <h3>Testing</h3>
+              <p>Our QA team verifies features to ensure they meet requirements before deployment.</p>
+          </div>
+      </div>
+
+      <div class="process-step">
+          <div class="step-number">6</div>
+          <div class="step-content">
+              <h3>Deploy</h3>
+              <p>After successful testing, the product is deployed, monitored, and continuously improved.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--Footer part -->
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-left">
+          <!-- <img src="images/logo.png" alt="InfiniteX Logo" class="footer-logo"> -->
+          <img src="images/new-logo-1.png" alt="InfiniteX Logo" class="footer-logo">
+          <p>65+ Years of combined retail experience</p>
+          <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <div class="contact-info">
+              <p><i class="fas fa-map-marker-alt"></i> Bentonville, Arkansas, USA</p>
+              <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+              <p><i class="fas fa-envelope"></i> info@infinitex.com</p>
+          </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-column">
+            <h3>Cloud Computing</h3>
+            <ul>
+                <li><a href="#">Cloud Strategy & Consulting</a></li>
+                <li><a href="#">Cloud Migration</a></li>
+                <li><a href="#">Cloud Security</a></li>
+                <li><a href="#">Cloud-Native Development</a></li>
+                <li><a href="#">Managed Cloud Services</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>AI & ML</h3>
+            <ul>
+                <li><a href="#">AI Strategy & Implementation</a></li>
+                <li><a href="#">Machine Learning Solutions</a></li>
+                <li><a href="#">Natural Language Processing</a></li>
+                <li><a href="#">Computer Vision</a></li>
+                <li><a href="#">AI-Powered Analytics</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>ERP</h3>
+            <ul>
+                <li><a href="#">ERP Implementation</a></li>
+                <li><a href="#">Customization & Integration</a></li>
+                <li><a href="#">Financial Management</a></li>
+                <li><a href="#">SAP Solutions</a></li>
+                <li><a href="#">ERP Support & Maintenance</a></li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2025 InfiniteX | All Rights Reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>
