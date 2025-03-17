@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services & Facilities</title>
+  <style>
+    /* Base reset + unify background color (main body) */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden; 
+      background-color: rgb(25, 34, 54);
+      color: #ffffff;
+      font-family: sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      z-index: 3;
+    }
+    .navbar a {
+      margin-left: 20px;
+      text-decoration: none;
+    }
+    .logo {
+      height: 60px;
+    }
+    /* Footer Section */
+    .footer-section {
+        background: linear-gradient(to bottom, rgba(30, 42, 71, 0.9), #1E2A47); /* Gradient to match process section */
+        padding: 40px 20px;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Footer Container */
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+        flex-wrap: wrap; /* Ensures wrapping for smaller screens */
+    }
+
+    /* Left Section */
+    .footer-left {
+        width: 40%;
+        min-width: 250px; /* Prevents shrinking too much */
+    }
+
+    .footer-logo {
+        max-width: 150px;
+        margin-bottom: 15px;
+    }
+
+    .footer-left p {
+        font-size: 16px;
+        color: #cccccc;
+        margin-bottom: 20px;
+    }
+
+    /* Social Icons */
+    .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .social-icons a {
+        color: #FFD700;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: #ffffff;
+    }
+
+    /* Contact Info */
+    .contact-info p {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact-info i {
+        color: #FFD700;
+    }
+
+    /* Right Section */
+    .footer-right {
+        width: 55%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; /* Enables wrapping for smaller screens */
+    }
+
+    /* Footer Columns */
+    .footer-column {
+        flex: 1;
+        min-width: 200px; /* Ensures columns don't get too narrow */
+        margin-bottom: 20px; /* Space between stacked columns */
+    }
+
+    .footer-column h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #FFD700;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+        color: #cccccc;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+    /* Bottom Section */
+    .footer-bottom {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 30px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        color: #cccccc;
+    }
+
+
+    /* Cloud Computing Flowchart Section */
+.cloud-flowchart-section {
+    width: 100%;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #1E2A47, #121A33); /* Matching background */
+    color: white;
+    text-align: center;
+}
+
+/* Container for Flowchart and Content */
+.cloud-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+/* Flowchart Image */
+.flowchart-image img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Content Section */
+.flowchart-content {
+    max-width: 550px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.flowchart-content h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #FFD700; /* Gold color */
+}
+
+.flowchart-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #d3d3d3;
+}
+
+.flowchart-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.flowchart-content ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.flowchart-content ul li strong {
+    color: #FFD700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cloud-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .flowchart-content {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+
+
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+
+        .footer-left {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            justify-content: center; /* Center icons and text */
+            display: flex;
+            flex-direction: column; /* Stack contact info */
+            align-items: center; /* Align center */
+        }  
+
+        .footer-right {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .footer-column {
+            width: 45%; /* Two columns layout */
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-column {
+            width: 100%; /* Full width on small screens */
+            text-align: center;
+        }
+    }
+
+
+</style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="home.html">
+      <img 
+        src="images/logo.png" 
+        alt="Logo" 
+        class="logo" 
+      />
+    </a>
+  </div>
+
+
+<!-- Cloud Computing Flowchart Section -->
+<section class="cloud-flowchart-section">
+    <div class="cloud-container">
+        <!-- Flowchart Image -->
+        <div class="flowchart-image">
+            <title> Flow Chart</title>
+            <img src="images/flow.png" alt="Cloud Computing Flowchart">
+        </div>
+        
+        <!-- Flowchart Content -->
+        <div class="flowchart-content">
+            <h2>Cloud Computing Workflow</h2>
+            <p>
+                Cloud computing provides on-demand access to computing resources such as servers, storage, and databases. 
+                The flowchart represents the key steps involved in **deploying and managing cloud services**.
+            </p>
+            <ul>
+                <li><strong>1. User Request:</strong> The client or organization initiates a request for cloud resources, which may include computing power, storage, networking, or specific cloud-based applications. This request can be made via a cloud provider’s portal, API, or Infrastructure as Code (IaC) tools like Terraform. At this stage, users may define the service configurations, such as instance types, memory, and storage requirements.</li>
+                <li><strong>2. Authentication:</strong> Credentials are verified for secure access.</li>
+                <li><strong>3. Resource Allocation:</strong> Virtual machines, storage, or services are assigned.</li>
+                <li><strong>4. Deployment:</strong> Applications or workloads are deployed in the cloud.</li>
+                <li><strong>5. Monitoring & Scaling:</strong> Performance is monitored, and scaling is done as needed.</li>
+                <li><strong>6. Billing & Optimization:</strong> Cost management and optimization are performed.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!--Footer part -->
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-left">
+          <img src="images/logo.png" alt="InfiniteX Logo" class="footer-logo">
+          <p>65+ Years of combined retail experience</p>
+          <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <div class="contact-info">
+              <p><i class="fas fa-map-marker-alt"></i> Bentonville, Arkansas, USA</p>
+              <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+              <p><i class="fas fa-envelope"></i> info@infinitex.com</p>
+          </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-column">
+            <h3>Cloud Computing</h3>
+            <ul>
+                <li><a href="#">Cloud Strategy & Consulting</a></li>
+                <li><a href="#">Cloud Migration</a></li>
+                <li><a href="#">Cloud Security</a></li>
+                <li><a href="#">Cloud-Native Development</a></li>
+                <li><a href="#">Managed Cloud Services</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>AI & ML</h3>
+            <ul>
+                <li><a href="#">AI Strategy & Implementation</a></li>
+                <li><a href="#">Machine Learning Solutions</a></li>
+                <li><a href="#">Natural Language Processing</a></li>
+                <li><a href="#">Computer Vision</a></li>
+                <li><a href="#">AI-Powered Analytics</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>ERP</h3>
+            <ul>
+                <li><a href="#">ERP Implementation</a></li>
+                <li><a href="#">Customization & Integration</a></li>
+                <li><a href="#">Financial Management</a></li>
+                <li><a href="#">SAP Solutions</a></li>
+                <li><a href="#">ERP Support & Maintenance</a></li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2025 InfiniteX | All Rights Reserved</p>
+  </div>
+</footer>
+</body>
+</html>
